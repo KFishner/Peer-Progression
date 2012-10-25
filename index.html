@@ -42,7 +42,14 @@
 	});
     });
     </script>
-    
+    <!-- Change Visibility -->
+    <script>
+    function go(){
+        document.getElementById('intro').style.display = 'none';
+        document.getElementById('slider').style.display = 'block';
+
+    }
+    </script>
     <!-- Change Values -->
     <script>
     function changeValue1(){
@@ -93,7 +100,22 @@
 
 <body onload="changeValue1()">
 
-    <div class="container gradient bshadow" style="border:1px solid #03031F">
+    <div class="container gradient bshadow">
+    <!--  Start Intro -->
+    <div class="container gradient bshadow textcenter" id="intro" style="position: absolute;top:0px;left:0px;z-index: 3;margin:0px;">
+        <h1 style="margin-bottom: 0px;font-size:40px;">Peer Progression</h1>
+        <p style="margin: 0px 0px 40px 0px;">display your vision, share, dissent, and collaborate</p>
+            <h2 class="darkorange">Requests</h2>
+            <ul class="rules">
+                <li>Give feedback in visual form (sketch, HTML, wireframe, etc)</li>
+                <br>
+                <li>Justify your revisions with sources of inspiration and brief explainations</li>
+                <br>
+                <li>Accompany each addition by a deletion. Ideas must conflict and give rise to simplicity and elegance. No frankenstein products.</li>
+            </ul>
+        <a class="gobutton" onclick="go();">Go</a>
+    </div>
+    <!--  End Intro -->
         <div class="gridhalf" style="width:56%; border-right:8px solid #01020F">
             <h1 style="text-align: center;">Revisions</h1>
             <div class="gridhalf" style="width:160px;margin-top:80px;">
@@ -124,16 +146,18 @@
         </div>
     </div>
     
-    <div class="chgslider gradient bshadow" style="border:1px solid #03031F">
+    
+    <div class="chgslider gradient bshadow" id="slider" style="border:1px solid #03031F;display:none;">
         <ul>
             <li id="node1" onclick="changeValue1();highlightNode1();"></li>
             <li id="node2" onclick="changeValue2();highlightNode2();"></li>
             <li id="node3" onclick="changeValue3();highlightNode3();"></li>
         </ul>
-    </div>
-    <div class="line">
+        <div class="line">
         
+        </div>
     </div>
+
 
 
 </body>
