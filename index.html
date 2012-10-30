@@ -29,10 +29,10 @@
     <script>
     $(document).ready(function() {
 	$(".various").fancybox({
-		maxWidth	: 1100,
-		maxHeight	: 800,
-		width		: '90%',
-		height		: '90%',
+		maxWidth	: 1200,
+		maxHeight	: 1000,
+		width		: '95%',
+		height		: '95%',
                 padding: 0,
 		fitToView	: false,
 		closeClick	: true,
@@ -42,37 +42,109 @@
 	});
     });
     </script>
-    <!-- Change Visibility -->
+    
+    <!-- Alerts -->
     <script>
-    function go(){
-        document.getElementById('intro').style.display = 'none';
-        document.getElementById('slider').style.display = 'block';
-
+    function comingsoon(){
+        alert("Feature coming soon")
     }
     </script>
+        
+    <!-- Navigation -->
+    <script>
+    function listing(){
+        document.getElementById('listingnav').style.display = 'block';
+        document.getElementById('slider').style.display = 'none';
+        document.getElementById('intro').style.display = 'none';
+
+    }
+    function slider(){
+        document.getElementById('listingnav').style.display = 'none';
+        document.getElementById('slider').style.display = 'block';
+    }
+    </script>
+    
+    <!-- Add New Listing -->
+    <script>
+    function addnew(){
+    document.getElementById('addnew').innerHTML = "<form><input type='text' name='listinginfo' id='listinginfo' value='' onclick='' onkeyup='if (event.keyCode == 13) document.getElementById('add2').click()' style='padding:0px;display:inline-block;'/><a class='forkbutton' id='add2' style='font-size:12px;margin:0px 10px' onclick='insertnew();'>+ Add</a></form>";
+    document.getElementById('listinginfo').focus();
+    document.getElementById('listinginfo').select();
+    }
+    </script>
+    <script>
+    function insertnew(){
+    var newlisting = document.createElement('a')
+    newlisting.setAttribute('class', 'listing')
+    var text = document.createTextNode(document.getElementById('listinginfo').value)
+    newlisting.appendChild(text)
+    document.getElementById('insertnew').appendChild(newlisting);
+    }
+    </script>
+
     <!-- Change Values -->
     <script>
     function changeValue1(){
     	document.getElementById('imgprev').innerHTML = "";
     	document.getElementById('imgnew').innerHTML = "<a class='fancybox' rel='' href='images/full/sketch.jpg'><img src='images/small/sketch.jpg' class='bshadowimg' style='width:320px' /></a>";
-        document.getElementById('details').innerHTML ="<div class='summaries'><h2>Summary</h2><p>This was my original sketch for a visual project management tool that promotes constructive dissention, rather than blind collaboration.</p><h2 style='margin-top:10px;'>Inspiration</h2><div class='links'><a href='http://www.stevenberlinjohnson.com/' target='_blank'>Steven Johnson</a></div><div class='explainations'>Peer progressivism and collaboration as conflict</div><br><br><div class='links'><a href='http://startupschool.org/' target='_blank'>Startup School</a></div><div class='explainations'>Conversations with Nimi about online product collaboration tools</div><br><br><div class='links'><a href='http://www.github.com/' target='_blank'>GitHub</a></div><div class='explainations'>The best collaboration tool out there, but really only works for code</div></div>"
+        document.getElementById('details').innerHTML ="<div class='summaries'><h2>Summary</h2><p>This was my original sketch for a visual project management tool that promotes constructive dissention, rather than blind collaboration.</p><h2 style='margin-top:10px;'>Inspiration</h2><div class='links'><a href='http://www.stevenberlinjohnson.com/' target='_blank'>Steven Johnson</a></div><div class='explainations'>Peer progressivism and collaboration as conflict</div><br><br><div class='links'><a href='http://startupschool.org/' target='_blank'>Startup School</a></div><div class='explainations'>Conversations with Nimi about online product collaboration tools</div><br><br><div class='links'><a href='http://www.github.com/' target='_blank'>GitHub</a></div><div class='explainations'>The best collaboration tool out there, but really only works for code</div></div><a class='forkbutton' onclick='comingsoon()'>Fork</a>"
     }
     </script>
     <script>
     function changeValue2(){
     	document.getElementById('imgprev').innerHTML = "<a class='fancybox' rel='' href='images/full/sketch.jpg'><img src='images/small/sketch.jpg' class='bshadowimg' style='width:160px' /></a>";
-    	document.getElementById('imgnew').innerHTML = "<a class='various fancybox.iframe' rel='' href='index.html'><img src='images/small/proto.jpg' class='bshadowimg' style='width:320px' /></a>";
-        document.getElementById('details').innerHTML = "<div class='summaries'><h2>Summary</h2><p>Graphical interpretation of the sketch. I want the design to emphasize the changes made, and the justifications and inspirations for those changes. Must promote conflict of ideas, but constructively.</p><h2 style='margin-top:10px;'>Inspiration</h2><div class='links'><a href='http://www.heroku.com/' target='_blank'>Heroku</a></div><div class='explainations'>Borrowed the dark design, used blue instead of purple as accent. Hoping to keep focus on the product changes</div><br><br><div class='links'><a href='http://layervault.org/' target='_blank'>Layer Vault</a></div><div class='explainations'>Completely stole the timeline slider to show the changes over time</div></div>"
+    	document.getElementById('imgnew').innerHTML = "<a class='various fancybox.iframe' rel='' href='102612.html'><img src='images/small/proto.jpg' class='bshadowimg' style='width:320px' /></a>";
+        document.getElementById('details').innerHTML = "<div class='summaries'><h2>Summary</h2><p>Graphical interpretation of the sketch. I want the design to emphasize the changes made, and the justifications and inspirations for those changes. Must promote conflict of ideas, but constructively.</p><h2 style='margin-top:10px;'>Inspiration</h2><div class='links'><a href='http://www.heroku.com/' target='_blank'>Heroku</a></div><div class='explainations'>Borrowed the dark design, used blue instead of purple as accent. Hoping to keep focus on the product changes</div><br><br><div class='links'><a href='http://layervault.org/' target='_blank'>Layer Vault</a></div><div class='explainations'>Completely stole the timeline slider to show the changes over time</div></div><a class='forkbutton' onclick='comingsoon();'>Fork</a>"
     }
     </script>
     <script>
     function changeValue3(){
-    	document.getElementById('imgprev').innerHTML = "<a class='various fancybox.iframe' rel='' href='index.html'><img src='images/small/proto.jpg' class='bshadowimg' style='width:160px' /></a>";
+    	document.getElementById('imgprev').innerHTML = "<a class='various fancybox.iframe' rel='' href='102612.html'><img src='images/small/proto.jpg' class='bshadowimg' style='width:160px' /></a>";
        	document.getElementById('imgnew').innerHTML = "<img src='images/small/plus.png' class='clearall' style='width:200px;margin-left:60px;margin-top:30px' />";
-    	document.getElementById('details').innerHTML = "<h2>Summary</h2><textarea rows='3' cols='40' maxlength='300' placeholder='Describe the purpose of your revisions' class='greyfont'></textarea><h2>Inspiration</h2><input type='text' size='30' placeholder='link' class='greyfont'><input type='text' size='30' placeholder='explanation' class='greyfont'><input type='text' size='30' placeholder='link' class='greyfont'><input type='text' size='30' placeholder='explanation' class='greyfont'><input type='text' size='30' placeholder='link' class='greyfont'><input type='text' size='30' placeholder='explanation' class='greyfont'>";
+    	document.getElementById('details').innerHTML = "<div class='summaries'><h2>Revision</h2><input id='inputfile' style='color:#9391AC' type='file'  /><h2 style='margin-top:10px'>Summary</h2><div id='summaryinsert'><textarea id='inputsummary' rows='3' cols='40' placeholder='Describe your revision' class='greyfont' ></textarea></div><h2>Inspiration</h2><div id='inspirationinsert'><input id='inputtitle1' type='text' size='15' placeholder='title' class='greyfont'><input id='inputlink1' type='text' size='25' placeholder='link' class='greyfont'><input id='inputexplain1' type='text' size='60' placeholder='explanation' class='greyfont'><br style='line-height:25px'><input id='inputtitle2' type='text' size='15' placeholder='title' class='greyfont'><input id='inputlink2' type='text' size='25' placeholder='link' class='greyfont'><input id='inputexplain2' type='text' size='60' placeholder='explanation' class='greyfont'><br style='line-height:25px'></div></div><a class='forkbutton' style='margin:10px 0px 0px 65px'  onclick='preview()'>Preview</a><a class='forkbutton' style='margin:10px 0px 0px 32px' onclick='comingsoon()'>Add Node</a>";
     }
     </script>
+    <script>
+    function preview(){
+    var summary1 = document.createElement('p');
+    summary1.setAttribute('class', 'explainations');
+    var text = document.createTextNode(document.getElementById('inputsummary').value);
+    summary1.appendChild(text);
+    document.getElementById('summaryinsert').appendChild(summary1);
+    element = document.getElementById('inputsummary');
+    element.parentNode.removeChild(element);
+
+    var title1 = document.createElement('a');
+    title1.setAttribute('class', 'links');
+    title1.setAttribute('target', '_blank');
+    title1.setAttribute('href', document.getElementById('inputlink1').value);
+    var text2 = document.createTextNode(document.getElementById('inputtitle1').value);
+    title1.appendChild(text2);
+    document.getElementById('inspirationinsert').appendChild(title1);
+    var reper = document.getElementById('inputtitle1');
+    var parinte = reper.parentNode;
+    parinte.insertBefore(title1, reper)
+    element = document.getElementById('inputtitle1');
+    element.parentNode.removeChild(element);
+    element = document.getElementById('inputlink1');
+    element.parentNode.removeChild(element);
     
+    var explain1 = document.createElement('p');
+    explain1.setAttribute('class', 'explainations');
+    var text3 = document.createTextNode(document.getElementById('inputexplain1').value);
+    explain1.appendChild(text3);
+    document.getElementById('inspirationinsert').appendChild(explain1);
+    var reper = document.getElementById('inputexplain1');
+    var parinte = reper.parentNode;
+    parinte.insertBefore(explain1, reper)
+    element = document.getElementById('inputexplain1');
+    element.parentNode.removeChild(element);
+
+   
+    
+    }
+    
+    </script>
     <!-- Change Slider Color -->
     <script>
     function highlightNode1(){
@@ -103,19 +175,34 @@
     <div class="container gradient bshadow">
     <!--  Start Intro -->
     <div class="container gradient bshadow textcenter" id="intro" style="position: absolute;top:0px;left:0px;z-index: 3;margin:0px;">
-        <h1 style="margin-bottom: 0px;font-size:40px;">Peer Progression</h1>
-        <p style="margin: 0px 0px 40px 0px;">display your vision, share, dissent, and collaborate</p>
+        <img src="images/logo.png" style="border:none;margin-bottom: 0px;width:400px;display:block;margin-left:auto;margin-right:auto;" />
+        <p style="margin: 3px 0px 40px 0px;font-size:20px">where ideas collide</p>
             <h2 class="darkorange">Requests</h2>
             <ul class="rules">
                 <li>Give feedback in visual form (sketch, HTML, wireframe, etc)</li>
                 <br>
                 <li>Justify your revisions with sources of inspiration and brief explainations</li>
                 <br>
-                <li>Accompany each addition by a deletion. Ideas must conflict and give rise to simplicity and elegance. No frankenstein products.</li>
+                <li>Accompany each addition by a deletion. Ideas must collide and give rise to simplicity and elegance. No frankenstein products.</li>
             </ul>
-        <a class="gobutton" onclick="go();">Go</a>
+        <a class="gobutton" onclick="listing();">Go</a>
     </div>
     <!--  End Intro -->
+    
+    <!--  Start Listing -->
+    <div class="container gradient bshadow" id="listingnav" style="position: absolute;top:0px;left:0px;z-index: 2;margin:0px;padding-top:0px;height:430px">
+        <h3 class="listingh">Project</h3>
+        <span id="insertnew">
+        <a class="listing" onclick="slider();">Tradefours</a>
+        <a class="listing">Code Example</a>
+        <a class="listing">Design Example</a>
+        <a class="listing">Text Example</a>
+        <a class="listing">Spreadsheet Example</a>
+        </span>
+        <a onclick="addnew();" class="listing"><span id="addnew">+ Add New</span></a>
+    </div>
+    <!--  End Listing -->
+    
         <div class="gridhalf" style="width:56%; border-right:8px solid #01020F">
             <h1 style="text-align: center;">Revisions</h1>
             <div class="gridhalf" style="width:160px;margin-top:80px;">
@@ -128,9 +215,10 @@
             </div>
         </div>
         <div class="gridhalf" style="width:37%;padding-right:0px;">
-        <form name="logic">
         <h1 style="text-align: center">Details</h1>
+        
         <span id="details">
+    <!-- Start Summary Details -->
         <div class='summaries'>
             <h2>Summary</h2>
             <p>Graphical interpretation of the sketch. I want the design to emphasize the changes made, and the justifications and inspirations for those changes. Must promote conflict of ideas, but constructively.</p>
@@ -139,10 +227,11 @@
             <div class='explainations'>Borrowed the dark design, used blue instead of purple as accent. Hoping to keep focus on the product changes</div>
             <br><br>
             <div class='links'><a href='http://layervault.org/' target='_blank'>Layer Vault</a></div>
-            <div class='explainations'>Completely stole the timeline slider to show the changes over time</div>
+            <div class='explainations'>Completely borrowed the timeline slider to show the changes over time</div>
         </div>
+    <!-- End Summary Details -->
         </span>
-        </form>
+
         </div>
     </div>
     
@@ -156,8 +245,10 @@
         <div class="line">
         
         </div>
+        <div>
+        <h2 onclick="listing()" class="return gradient bshadow">< Return to Listings</h1>
+        </div>
     </div>
-
 
 
 </body>
