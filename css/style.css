@@ -2,9 +2,8 @@ body{
     padding:0px;
     margin:0px;
     font-family: "CorbelRegular", "Helvetica Neue", Helvetica, sans-serif;
-    color:#646EF0;
-    text-shadow: 0 -1px 2px rgba(5, 4, 11, .8);
-    background-image:url('../images/skewedprint.png');
+    color:#010101;
+    text-shadow: 0 -1px 4px rgba(50, 50, 50, .8)
 }
 .clearall{
     border:none;
@@ -15,7 +14,7 @@ h1{
     font-size: 34px;
     margin-top:0px;
     margin-bottom:10px;
-    color:#B6B7D4;
+    color:#B6B6d6;
     text-shadow: 0 -1px 2px rgba(37, 37, 51, .8);
 }
 
@@ -31,8 +30,7 @@ ul{
     list-style: none;
 }
 img {
-    border: 1px solid #03031F;
-    border-radius: 5px 5px;
+    border-radius: 2px 2px;
 }
 
 img:hover{
@@ -46,33 +44,37 @@ img:hover{
     margin-left:auto;
     margin-right:auto;
     width: 1040px;
-    min-height:400px;
+    min-height:350px;
     height:inherit;
     margin-top:30px;
     margin-bottom: 30px;
     padding:30px 20px;
     border-radius: 5px 5px;
-    border:1px solid #03031F;
+    border:1px solid #111;
 }
 .gradient{
-background: #1d1f28; /* Old browsers */
-background: -moz-linear-gradient(top,  #1d1f28 0%, #11111e 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1d1f28), color-stop(100%,#11111e)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  #1d1f28 0%,#11111e 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  #1d1f28 0%,#11111e 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  #1d1f28 0%,#11111e 100%); /* IE10+ */
-background: linear-gradient(to bottom,  #1d1f28 0%,#11111e 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1d1f28', endColorstr='#11111e',GradientType=0 ); /* IE6-9 */
+background: #0a0a0a; /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover,  #0a0a0a 1%, #020202 100%); /* FF3.6+ */
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(1%,#0a0a0a), color-stop(100%,#020202)); /* Chrome,Safari4+ */
+background: -webkit-radial-gradient(center, ellipse cover,  #0a0a0a 1%,#020202 100%); /* Chrome10+,Safari5.1+ */
+background: -o-radial-gradient(center, ellipse cover,  #0a0a0a 1%,#020202 100%); /* Opera 12+ */
+background: -ms-radial-gradient(center, ellipse cover,  #0a0a0a 1%,#020202 100%); /* IE10+ */
+background: radial-gradient(ellipse at center,  #0a0a0a 1%,#020202 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a0a0a', endColorstr='#020202',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.bgprint{
+    background-image:url('../images/skewedprint.png');
 }
 .bshadow{
--webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.8);
--moz-box-shadow:    0px 2px 5px rgba(0, 0, 0, 0.8);
-box-shadow:         0px 2px 5px rgba(0, 0, 0, 0.8);
-}
+-webkit-box-shadow: 0px 2px 10px rgba(34, 34, 34, 0.4);
+-moz-box-shadow:    0px 2px 10px rgba(34, 34, 34, 0.4);
+box-shadow:         0px 2px 10px rgba(34, 34, 34, 0.4);
+    }
+
 .bshadowimg{
--webkit-box-shadow: 0px 1px 4px rgba(90, 91, 156, 0.8);
--moz-box-shadow:    0px 1px 4px rgba(90, 91, 156, 0.8);
-box-shadow:         0px 1px 4px rgba(90, 91, 156, 0.8);
+-webkit-box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.8);
+-moz-box-shadow:    0px 1px 8px rgba(0, 0, 0, 0.8);
+box-shadow:         0px 1px 8px rgba(0, 0, 0, 0.8);
     opacity:0.9;
     filter:alpha(opacity=90); /* For IE8 and earlier */
 }
@@ -81,16 +83,7 @@ box-shadow:         0px 1px 4px rgba(90, 91, 156, 0.8);
     float:left;
     padding:0px 20px;
 }
-.chgslider{
-    display:block;
-    margin-left:auto;
-    margin-right:auto;
-    width: 1040px;
-    height:40px;
-    margin-bottom: 10px;
-    padding:10px 20px;
-    border-radius: 2px 2px;
-}
+
 .line {
     display:block;
     margin-left:auto;
@@ -101,7 +94,7 @@ box-shadow:         0px 1px 4px rgba(90, 91, 156, 0.8);
     border-radius: 2px 2px;
     position:relative;
     bottom:24px;
-    border-top:2px solid #B6B7D4;
+    border-top:2px solid #afafaf;
     z-index: 1;
 }
 
@@ -120,13 +113,13 @@ box-shadow:         0px 1px 4px rgba(90, 91, 156, 0.8);
     margin-right:-20px;
     font-size:28px;
     color:#C73F17;
-    border-bottom:2px solid #11111e;
+    border-bottom:2px solid #00000b;
 }
 .listing{
     display:block;
     font-size:22px;
     font-weight: bold;
-    border-bottom: 1px solid #1d1f28;
+    border-bottom: 1px solid #1b1b1b;
     color:#9391AC;
     padding:10px 120px;
     margin-left:-20px;
@@ -149,17 +142,21 @@ box-shadow:         0px 1px 4px rgba(90, 91, 156, 0.8);
     border-bottom:1px solid #1d1f28;
 }
 .summaries{
-    background:#11111e;
+    background:black;
     margin:0px;
     padding:5px 10px 10px 10px;
     border-radius:5px 5px;
-    border:2px solid #1d1f28;
+    border:2px solid #1d1d1d;
 }
 .summaries p{
     color:#9391AC;
     font-size: 13px;
     margin:0px;
     padding:0px;
+}
+.summaries h2{
+    color:#262635;
+    text-shadow: 0 -1px 1px rgba(80, 80, 80, .8);
 }
 p.links{
     width:150px;
@@ -187,7 +184,18 @@ p.links{
     width: 600px;
     margin: 0px 0px 20px 0px;
     padding: 0px 220px;
-    color:#9391AC;
+    color:#999;
+}
+.chgslider{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width: 1040px;
+    height:40px;
+    margin-bottom: 10px;
+    padding:10px 20px;
+    border:1px solid #111111;
+    border-radius: 2px 2px;
 }
 .chgslider ul{
     display:inline-block;
@@ -200,7 +208,7 @@ p.links{
     margin-left:50px;
     width:30px;
     height:30px;
-    background: #f2f2f2;
+    background: #bfbfbf;
     border-radius:15px 15px;
     z-index: 2;
     position:relative;
@@ -216,7 +224,7 @@ p.links{
     position:relative;
 }
 .chgslideractive{
-    background: orange;
+    background: #C73F17;
     position:relative;
 }
 .return{
@@ -224,14 +232,14 @@ p.links{
     display:inline-block;
     padding:10px 30px;
     margin-left:-20px;
-    border:1px solid #646EF0;
-    border-radius: 15px 15px;
+    border:1px solid #111111;
+    border-radius: 10px 10px;
 }
 .return:hover{
     cursor: pointer;
 }
 #node1{
-    background: orange;
+    background: #C73F17;
 }
 /* Buttons */
 .gobutton {
