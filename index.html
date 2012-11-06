@@ -6,42 +6,10 @@
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
     <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
     <!-- Add jQuery library -->
-    <script src="http://code.jquery.com/jquery-latest.js"></script>    
-    <!-- Add fancyBox -->
-    <link rel="stylesheet" href="js/fancybox/source/jquery.fancybox.css?v=2.1.3" type="text/css" media="screen" />
-    <script type="text/javascript" src="js/fancybox/source/jquery.fancybox.pack.js?v=2.1.3"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="http://jquery-ui.googlecode.com/svn/tags/latest/ui/jquery.effects.core.js"></script>
+    <script src="http://jquery-ui.googlecode.com/svn/tags/latest/ui/jquery.effects.slide.js"></script>
 
-    <!-- Optionally add helpers - button, thumbnail and/or media -->
-    <link rel="stylesheet" href="js/fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
-    <script type="text/javascript" src="js/fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
-    <script type="text/javascript" src="js/fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.5"></script>
-    
-    <!-- Run fancyBox -->
-    <script type="text/javascript">
-	$(document).ready(function() {
-		$(".fancybox").fancybox({
-                    padding : 2,
-                    autoSize:true,
-                });
-	});
-    </script>
-    <script>
-    $(document).ready(function() {
-	$(".various").fancybox({
-		maxWidth	: 1200,
-		maxHeight	: 1000,
-		width		: '95%',
-		height		: '95%',
-                padding: 0,
-		fitToView	: false,
-		closeClick	: true,
-		openEffect	: 'none',
-		closeEffect	: 'none',
-                autoCenter      : true,
-	});
-    });
-    </script>
-    
     <!-- Alerts -->
         
     <!-- Navigation -->
@@ -100,7 +68,7 @@
         </div>
         <div class="gridfour">
             <div class="gridtext">Add New<p>Project</p></div>
-            <a href="woomply.html"><div class="gridimage"></div></a>
+            <a href="woomply.html"><div class="gridimage"><img src='images/icons/plus.png' style='padding:35px'/></div></a>
         </div>
         </span>
         <!-- Add New <a onclick="addnew();" class="listing"><span id="addnew">+ Add New</span></a>  Add New -->

@@ -15,6 +15,7 @@ script{
 }
 a{
     text-decoration: none;
+    cursor: pointer;
 }
 h1{
     font-size: 34px;
@@ -185,6 +186,7 @@ box-shadow:         0px 1px 8px rgba(0, 0, 0, 0.8);
 }
 /* Right Nav */
 #rightnav{
+    z-index: 5;
     display:none;
     width:340px;
     height:540px;
