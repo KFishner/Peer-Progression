@@ -10,9 +10,6 @@ body{
     text-shadow: none;
     box-shadow: none;
 }
-script{
-    display:none;
-}
 a{
     text-decoration: none;
 }
@@ -50,18 +47,16 @@ img:hover{
     margin-right:auto;
     width: 1040px;
 }
-.content{
-    z-index: 1;
+.containerbody{
     position:relative;
     display:block;
-    margin: 0 auto;
+    margin-left:auto;
+    margin-right:auto;
     width: 1040px;
     height:500px;
     padding:20px 0px;
-}
-#holder{
-    width:940px;
-    position: relative;
+
+
 }
 .gradient{
 background: #0a0a0a; /* Old browsers */
@@ -143,9 +138,7 @@ box-shadow:         0px 1px 8px rgba(0, 0, 0, 0.8);
     color:#d2d2d2;
     font-weight:100;
 }
-/* Left Nav */
 .leftnav{
-    z-index: 900;
     width:50px;
     height:540px;
     position:absolute;
@@ -156,17 +149,14 @@ box-shadow:         0px 1px 8px rgba(0, 0, 0, 0.8);
 }
 
 .nbutton{
-    z-index: 1000;
-    height:32px;
-    padding:9px;
+    height:50px;
     border-bottom: 1px solid #111111;
     border-top:1px solid #222222;
 }
 .nbuttonhover{
     cursor: pointer;
-    position: relative;
     background:#333333;
-    width:140px;
+    width:150px;
     border-right:2px solid #1a1a1a;
     border-bottom:2px solid #1a1a1a;
 
@@ -175,28 +165,12 @@ box-shadow:         0px 1px 8px rgba(0, 0, 0, 0.8);
 .nbuttonhover p{
     color:#f2f2f2;
     float:left;
-    margin:9px 0px 0px 9px;
     display:inline-block;
     font-weight: 200;
 }
 .nbutton img{
-    width:32px;
+    width:50px;
     float:left;
-}
-/* Right Nav */
-#rightnav{
-    display:none;
-    width:340px;
-    height:540px;
-    position:absolute;
-    top:87px;
-    right:0px;
-    float:left;
-    background:#151515;
-    }
-
-.holder iframe{
-    frameborder:0;
 }
 .gridhalf{
     position:relative;
@@ -261,12 +235,16 @@ box-shadow:         0px 1px 8px rgba(0, 0, 0, 0.8);
     color:#C73F17;
     border-bottom:1px solid #1d1f28;
 }
-
+.summary{
+    float:left;
+    width:37%;
+}
 .summaries{
+    background:black;
     margin:0px;
     padding:5px 10px 10px 10px;
     border-radius:5px 5px;
-    border-left: 1px solid #111111;
+    border:2px solid #1d1d1d;
 }
 .summaries p{
     color:#9391AC;
@@ -276,6 +254,7 @@ box-shadow:         0px 1px 8px rgba(0, 0, 0, 0.8);
 }
 .summaries h2{
     color:#262635;
+    text-shadow: 0 -1px 1px rgba(80, 80, 80, .8);
 }
 p.links{
     width:150px;
@@ -283,7 +262,7 @@ p.links{
     color:#C73F17;
 }
 .links{
-    width:120px;
+    width:150px;
     display:inline-block;
     color:#C73F17;
 
@@ -369,16 +348,6 @@ p.links{
     height:124px;
     margin:0px 0px 0px 20px
 }
-.gridimage:hover{
-    cursor: pointer;
-    position: relative;
-    bottom:1px;
-    right:1px;
-    border:1px solid rgba(242,242,242,0.6);
-}
-.gridfour img:hover{
-    cursor: pointer;
-}
 .gridtext{
     display:inline-block;
     float:left;
@@ -406,6 +375,13 @@ p.links{
     margin:2px;
 }
 
+.gridimage:hover{
+    cursor: pointer;
+    position:relative;
+    bottom:1px;
+    right:1px;
+    border:1px solid rgba(242,242,242,0.6);
+}
 .imageholder{
     display:block;
     margin-left:auto;
@@ -463,7 +439,7 @@ p.links{
 	padding:6px 16px;
 	text-decoration:none;
 	text-shadow:1px 1px 0px #ffffff;
-        margin:20px 0px 0px 0px;
+        margin:10px 0px 0px 154px;
 }.forkbutton:hover {
 	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed) );
 	background:-moz-linear-gradient( center top, #dfdfdf 5%, #ededed 100% );

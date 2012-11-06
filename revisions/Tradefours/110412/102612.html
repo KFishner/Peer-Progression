@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Peer Progression</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
+    <!-- Add jQuery library -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    
+    <!-- Add fancyBox -->
+    <link rel="stylesheet" href="js/fancybox/source/jquery.fancybox.css?v=2.1.3" type="text/css" media="screen" />
+    <script type="text/javascript" src="js/fancybox/source/jquery.fancybox.pack.js?v=2.1.3"></script>
+
+    <!-- Optionally add helpers - button, thumbnail and/or media -->
+    <link rel="stylesheet" href="js/fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
+    <script type="text/javascript" src="js/fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+    <script type="text/javascript" src="js/fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.5"></script>
+    
+    <!-- Run fancyBox -->
+    <script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox({
+                    padding : 2,
+                    autoSize:true,
+                });
+	});
+    </script>
+    <script>
+    $(document).ready(function() {
+	$(".various").fancybox({
+		maxWidth	: 1100,
+		maxHeight	: 800,
+		width		: '90%',
+		height		: '90%',
+                padding: 0,
+		fitToView	: false,
+		closeClick	: true,
+		openEffect	: 'none',
+		closeEffect	: 'none',
+                autoCenter      : true,
+	});
+    });
+    </script>
+    <!-- Change Visibility -->
+    <script>
+    function go(){
+        document.getElementById('intro').style.display = 'none';
+        document.getElementById('slider').style.display = 'block';
+
+    }
+    </script>
+    <!-- Change Values -->
+    <script>
+    function changeValue1(){
+    	document.getElementById('imgprev').innerHTML = "";
+    	document.getElementById('imgnew').innerHTML = "<a class='fancybox' rel='' href='images/full/sketch.jpg'><img src='images/small/sketch.jpg' class='bshadowimg' style='width:320px' /></a>";
+        document.getElementById('details').innerHTML ="<div class='summaries'><h2>Summary</h2><p>This was my original sketch for a visual project management tool that promotes constructive dissention, rather than blind collaboration.</p><h2 style='margin-top:10px;'>Inspiration</h2><div class='links'><a href='http://www.stevenberlinjohnson.com/' target='_blank'>Steven Johnson</a></div><div class='explainations'>Peer progressivism and collaboration as conflict</div><br><br><div class='links'><a href='http://startupschool.org/' target='_blank'>Startup School</a></div><div class='explainations'>Conversations with Nimi about online product collaboration tools</div><br><br><div class='links'><a href='http://www.github.com/' target='_blank'>GitHub</a></div><div class='explainations'>The best collaboration tool out there, but really only works for code</div></div>"
+    }
+    </script>
+    <script>
+    function changeValue2(){
+    	document.getElementById('imgprev').innerHTML = "<a class='fancybox' rel='' href='images/full/sketch.jpg'><img src='images/small/sketch.jpg' class='bshadowimg' style='width:160px' /></a>";
+    	document.getElementById('imgnew').innerHTML = "<a class='various fancybox.iframe' rel='' href='index.html'><img src='images/small/proto.jpg' class='bshadowimg' style='width:320px' /></a>";
+        document.getElementById('details').innerHTML = "<div class='summaries'><h2>Summary</h2><p>Graphical interpretation of the sketch. I want the design to emphasize the changes made, and the justifications and inspirations for those changes. Must promote conflict of ideas, but constructively.</p><h2 style='margin-top:10px;'>Inspiration</h2><div class='links'><a href='http://www.heroku.com/' target='_blank'>Heroku</a></div><div class='explainations'>Borrowed the dark design, used blue instead of purple as accent. Hoping to keep focus on the product changes</div><br><br><div class='links'><a href='http://layervault.org/' target='_blank'>Layer Vault</a></div><div class='explainations'>Completely stole the timeline slider to show the changes over time</div></div>"
+    }
+    </script>
+    <script>
+    function changeValue3(){
+    	document.getElementById('imgprev').innerHTML = "<a class='various fancybox.iframe' rel='' href='index.html'><img src='images/small/proto.jpg' class='bshadowimg' style='width:160px' /></a>";
+       	document.getElementById('imgnew').innerHTML = "<img src='images/small/plus.png' class='clearall' style='width:200px;margin-left:60px;margin-top:30px' />";
+    	document.getElementById('details').innerHTML = "<h2>Summary</h2><textarea rows='3' cols='40' maxlength='300' placeholder='Describe the purpose of your revisions' class='greyfont'></textarea><h2>Inspiration</h2><input type='text' size='30' placeholder='link' class='greyfont'><input type='text' size='30' placeholder='explanation' class='greyfont'><input type='text' size='30' placeholder='link' class='greyfont'><input type='text' size='30' placeholder='explanation' class='greyfont'><input type='text' size='30' placeholder='link' class='greyfont'><input type='text' size='30' placeholder='explanation' class='greyfont'>";
+    }
+    </script>
+    
+    <!-- Change Slider Color -->
+    <script>
+    function highlightNode1(){
+        document.getElementById('node1').style.background = 'orange';
+        document.getElementById('node2').style.background = '#f2f2f2';
+        document.getElementById('node3').style.background = '#f2f2f2';
+    }
+    </script>
+    <script>
+    function highlightNode2(){
+        document.getElementById('node2').style.background = 'orange';
+        document.getElementById('node1').style.background = '#f2f2f2';
+        document.getElementById('node3').style.background = '#f2f2f2';
+    }
+    </script>
+    <script>
+    function highlightNode3(){
+        document.getElementById('node3').style.background = 'orange';
+        document.getElementById('node1').style.background = '#f2f2f2';
+        document.getElementById('node2').style.background = '#f2f2f2';
+    }
+    </script>
+
+</head>
+
+<body onload="changeValue1()">
+
+    <div class="container gradient bshadow">
+    <!--  Start Intro -->
+    <div class="container gradient bshadow textcenter" id="intro" style="position: absolute;top:0px;left:0px;z-index: 3;margin:0px;">
+        <h1 style="margin-bottom: 0px;font-size:40px;">tradefours</h1>
+        <p style="margin: 0px 0px 40px 0px;">display your vision, share, dissent, and collaborate</p>
+            <h2 class="darkorange">Requests</h2>
+            <ul class="rules">
+                <li>Give feedback in visual form (sketch, HTML, wireframe, etc)</li>
+                <br>
+                <li>Justify your revisions with sources of inspiration and brief explainations</li>
+                <br>
+                <li>Accompany each addition by a deletion. Ideas must conflict and give rise to simplicity and elegance. No frankenstein products.</li>
+            </ul>
+        <a class="gobutton" onclick="go();">Go</a>
+    </div>
+    <!--  End Intro -->
+        <div class="gridhalf" style="width:56%; border-right:8px solid #01020F">
+            <h1 style="text-align: center;">Revisions</h1>
+            <div class="gridhalf" style="width:160px;margin-top:80px;">
+                <h3 style="text-align: center;">Previous</h3>
+                <span id="imgprev"><a class="fancybox" rel="" href=""></a></span>
+            </div>
+            <div class="gridhalf" style="width:320px;margin-left:22px">
+                <h3 style="text-align: center;">New</h3>
+                <span id="imgnew"><a class='fancybox' rel='' href='images/full/sketch.jpg'><img src='images/small/sketch.jpg' class='bshadowimg' style='width:320px' /></a></span>
+            </div>
+        </div>
+        <div class="gridhalf" style="width:37%;padding-right:0px;">
+        <form name="logic">
+        <h1 style="text-align: center">Details</h1>
+        <span id="details">
+        <div class='summaries'>
+            <h2>Summary</h2>
+            <p>Graphical interpretation of the sketch. I want the design to emphasize the changes made, and the justifications and inspirations for those changes. Must promote conflict of ideas, but constructively.</p>
+            <h2 style='margin-top:10px;'>Inspiration</h2>
+            <div class='links'><a href='http://www.heroku.com/' target='_blank'>Heroku</a></div>
+            <div class='explainations'>Borrowed the dark design, used blue instead of purple as accent. Hoping to keep focus on the product changes</div>
+            <br><br>
+            <div class='links'><a href='http://layervault.org/' target='_blank'>Layer Vault</a></div>
+            <div class='explainations'>Completely stole the timeline slider to show the changes over time</div>
+        </div>
+        </span>
+        </form>
+        </div>
+    </div>
+    
+    
+    <div class="chgslider gradient bshadow" id="slider" style="border:1px solid #03031F;display:none;">
+        <ul>
+            <li id="node1" onclick="changeValue1();highlightNode1();"></li>
+            <li id="node2" onclick="changeValue2();highlightNode2();"></li>
+            <li id="node3" onclick="changeValue3();highlightNode3();"></li>
+        </ul>
+        <div class="line">
+        
+        </div>
+    </div>
+
+
+
+</body>
+</html>
