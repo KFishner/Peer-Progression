@@ -5,249 +5,26 @@
     <title>Peer Progression</title>
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
     <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
+
     <!-- Add jQuery library -->
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="http://jquery-ui.googlecode.com/svn/tags/latest/ui/jquery.effects.core.js"></script>
     <script src="http://jquery-ui.googlecode.com/svn/tags/latest/ui/jquery.effects.slide.js"></script>
+
+    <!-- jQuery Script -->
+    <script type="text/javascript" src="js/jquery.base.js"></script>
     
-    <!-- Alerts -->
-    <script>
-    function comingsoon(){
-        alert("Feature coming soon")
-    }
-    </script>
-    
-    <!-- Navigation -->
-
-    
-    <!-- Add New Listing -->
-
-    <!-- Select Revision -->
-    <script>
-    $(document).ready(function(){
-
-
-    $("#rev1,#button3").click(
-      function () {
-	$('#insertnew').children().remove();
-        $('#insertnew').append("<img class='imageholder' src='images/full/sketch.jpg' height='500px'/>");
-	$('#leftnav').css('display','block');
-	$('#revisionsummary').children().remove();
-        $('#revisionsummary').append("<p>This was my original sketch for a visual project management tool that promotes constructive dissention, rather than blind collaboration.</p>");
-	$('#link1,#explain1,#link2,#explain2').children().remove();
-	$('#link1').append("<a href='http://www.stevenberlinjohnson.com/' target='_blank'>Steven Johnson</a>")
-	$('#explain1').append("<span>Peer progressivism and collaboration as conflict</span>")
-	$('#link2').append("<a href='http://startupschool.org/' target='_blank'>Startup School</a>")
-	$('#explain2').append("<span>Conversations with Nimi about online product collaboration tools</span>")
-	
-      }
-    );
-    $("#rev2").click(
-      function () {
-	$('#insertnew').children().remove();
-        $('#insertnew').append("<img class='imageholder' src='images/full/proto.jpg' height='500px'/>");
-	$('#leftnav').css('display','block');
-	$('#revisionsummary').children().remove();
-        $('#revisionsummary').append("<p>Graphical interpretation of the sketch. I want the design to emphasize the changes made, and the justifications and inspirations for those changes. Must promote conflict of ideas, but constructively.</p>");
-	$('#link1,#explain1,#link2,#explain2').children().remove();
-	$('#link1').append("<a href='http://www.heroku.com/' target='_blank'>Heroku</a>")
-	$('#explain1').append("<span>Borrowed the dark design, used blue instead of purple as accent. Hoping to keep focus on the product changes</span>")
-	$('#link2').append("<a href='http://layervault.org/' target='_blank'>Layer Vault</a>")
-	$('#explain2').append("<span>Conversations with Nimi about online product collaboration tools</span>")
-
-	
-      }
-    );
-    $("#rev3").click(
-      function () {
-	$('#insertnew').children().detach();
-
-        $('#insertnew').append("<iframe src='revisions/Tradefours/110412/index.html' frameborder='0' width='1100px' height='500px'></iframe>");
-	
-	$('#leftnav').css('display','block');
-      }
-    )
-    $("#rev4").click(
-      function () {
-	$('#insertnew').children().detach();
-
-        $('#insertnew').append("<iframe src='index.html' frameborder='0' width='1100px' height='500px'></iframe>");
-	
-	$('#leftnav').css('display','block');
-      }
-    );
-    $("#button5").click(
-      function () {
-$("#rightnav").toggle('slide', { direction: "right" },'slow');
-
-var position = $('#holder').css('right');
-if ( position == '150px')
-{
-    $("#holder").animate({
-	'right':"0px",}
-	,600, function(){
-    // Animation complete.
-	});;
-}else{
-    $("#holder").animate({
-	'right':"150px"}
-	,600, function(){
-    // Animation complete.
-	});;
-}
-	$('#insertnew').children().remove();
-	$('#revisionsummary').children().remove();
-        $('#revisionsummary').append("<div id='summaryinsert'><textarea id='inputsummary' rows='3' cols='40' placeholder='Describe your revision' class='greyfont' ></textarea></div>");
-	$('#link1,#explain1,#link2,#explain2').children().remove();
-	$('.links').css("width", "240")
-	$('#link1').append("<span><input id='inputtitle1' type='text' size='18' placeholder='title' class='greyfont'><input id='inputlink1' type='text' size='18' placeholder='link' class='greyfont'></span>")
-	$('#explain1').append("<span><input id='inputexplain1' type='text' size='44' placeholder='explanation' class='greyfont'></span>")
-	$('#link2').append("<span><input id='inputtitle1' type='text' size='18' placeholder='title' class='greyfont'><input id='inputlink2' type='text' size='18' placeholder='link' class='greyfont'></span>")
-	$('#explain2').append("<span><input id='inputexplain2' type='text' size='44' placeholder='explanation' class='greyfont'></span>")
-	
-      }
-    );
-    });
-    </script>
-    
-    <!-- Preview -->
-    <script>
-
-    function preview(){
-    var summary1 = document.createElement('p');
-    summary1.setAttribute('class', 'explainations');
-    var text = document.createTextNode(document.getElementById('inputsummary').value);
-    summary1.appendChild(text);
-    document.getElementById('summaryinsert').appendChild(summary1);
-    element = document.getElementById('inputsummary');
-    element.parentNode.removeChild(element);
-
-    var title1 = document.createElement('a');
-    title1.setAttribute('class', 'links');
-    title1.setAttribute('target', '_blank');
-    title1.setAttribute('href', document.getElementById('inputlink1').value);
-    var text2 = document.createTextNode(document.getElementById('inputtitle1').value);
-    title1.appendChild(text2);
-    document.getElementById('inspirationinsert').appendChild(title1);
-    var reper = document.getElementById('inputtitle1');
-    var parinte = reper.parentNode;
-    parinte.insertBefore(title1, reper)
-    element = document.getElementById('inputtitle1');
-    element.parentNode.removeChild(element);
-    element = document.getElementById('inputlink1');
-    element.parentNode.removeChild(element);
-    
-    var explain1 = document.createElement('p');
-    explain1.setAttribute('class', 'explainations');
-    var text3 = document.createTextNode(document.getElementById('inputexplain1').value);
-    explain1.appendChild(text3);
-    document.getElementById('inspirationinsert').appendChild(explain1);
-    var reper = document.getElementById('inputexplain1');
-    var parinte = reper.parentNode;
-    parinte.insertBefore(explain1, reper)
-    element = document.getElementById('inputexplain1');
-    element.parentNode.removeChild(element);
-
-   
-    }
-    </script>
-<!-- Right Nav --> 
-    <script>
-    $(document).ready(function(){
-
-    $("#button1").click(function () {
-	$("#rightnav").toggle('slide', { direction: "right" },'slow');
-
-var position = $('#holder').css('right');
-if ( position == '150px')
-{
-    $("#holder").animate({
-	'right':"0px",}
-	,600, function(){
-    // Animation complete.
-	});;
-}else{
-    $("#holder").animate({
-	'right':"150px"}
-	,600, function(){
-    // Animation complete.
-	});;
-}
-	
-    })});
-    </script>
-<!-- Left Nav -->
-    <script>
-    $(document).ready(function(){
-
-
-    $("#button1").hover(
-      function () {
-        $(this).addClass("nbuttonhover").append('<p>Summary</p>');
-      }, 
-      function () {
-        $(this).removeClass("nbuttonhover").find("p:last").remove();
-      }
-    );
-
-    $("#button2").hover(
-      function () {
-        $(this).addClass("nbuttonhover").append('<p>Share</p>');
-      }, 
-      function () {
-        $(this).removeClass("nbuttonhover").find("p:last").remove();
-      }
-    );
-    $("#button3").hover(
-      function () {
-        $(this).addClass("nbuttonhover").append('<p>Previous</p>');
-      }, 
-      function () {
-        $(this).removeClass("nbuttonhover").find("p:last").remove();
-      }
-    );
-    $("#button4").hover(
-      function () {
-        $(this).addClass("nbuttonhover").append('<p>Next</p>');
-      }, 
-      function () {
-        $(this).removeClass("nbuttonhover").find("p:last").remove();
-      }
-    );
-    $("#button5").hover(
-      function () {
-        $(this).addClass("nbuttonhover").append('<p>Add Revision</p>');
-      }, 
-      function () {
-        $(this).removeClass("nbuttonhover").find("p:last").remove();
-      }
-    );});
-
-    </script>
-
-    <script>
-	
-    function addNode(){
-        var newnode = document.createElement('li');
-        newnode.setAttribute('id', 'node4');
-        newnode.setAttribute('onclick', 'highlightNode4()');
-        document.getElementById('nodeslider').appendChild(newnode);
-
-    }
-    </script>
-    <script>
-	function date(){
-	    var months = ['January','February','March','April','May','June','July',
-	    'August','September','October','November','December'];       
-	    var tomorrow = new Date();
-	    tomorrow.setTime(tomorrow.getTime() + (3600*24));       
-	    document.getElementById("spanDate").innerHTML = months[tomorrow.getMonth()] + " " + tomorrow.getDate()+ ", " + tomorrow.getFullYear();
-	}
-    </script>
+    <!-- Facebook Sharer tags -->
+<meta name="title" 
+      content="Project at Tradefours">
+<meta name="description" 
+      content="Conflict and collaborate" />
+<link rel="image_src" 
+      href="images/logo.png" />
 
 </head>
 
-<body class='gradient' onload='date()'>
+<body class='gradient'>
     <div class="headerbg">
         <div class="header container">
             <ul class="nav">
@@ -283,23 +60,23 @@ if ( position == '150px')
         <span id="insertnew">
         <div class="gridfour">
             <div class="gridtext">Sketch<p>October 20th, 2012</p></div>
-            <img src='images/small/sketch.jpg' id="rev1" width="114px" height="114px"/>
+            <img src='images/small/sketch.jpg' id="rev0" width="114px" height="114px"/>
         </div>
         <div class="gridfour">
             <div class="gridtext">Blue version<p>October 30th, 2012</p></div>
-            <img src='images/small/proto.jpg' id="rev2" width="114px" height="114px"/>
+            <img src='images/small/proto.jpg' id="rev1" width="114px" height="114px"/>
         </div>
         <div class="gridfour">
             <div class="gridtext">Black version<p>November 31st, 2012</p></div>
-            <img src='images/small/black.png' id="rev3" width="114px" height="114px"/>
+            <img src='images/small/black.png' id="rev2" width="114px" height="114px"/>
         </div>
         <div class="gridfour">
             <div class="gridtext">Current version<p id="spanDate"></p></div>
-            <img src='images/small/black.png' id="rev4" width="114px" height="114px"/>
+            <img src='images/small/black.png' id="rev3" width="114px" height="114px"/>
         </div>
         <div class="gridfour">
             <div class="gridtext">Add New<p>Revision</p></div>
-            <div class="gridimage"><img src='images/icons/plus.png' id="rev4" style='padding:35px'/></div>
+            <div class="gridimage"><img src='images/icons/plus.png' id="revnew" style='padding:35px'/></div>
         </div>
         </span>
         <!-- Add New <a onclick="addnew();" class="listing"><span id="addnew">+ Add New</span></a>  Add New -->
@@ -311,13 +88,9 @@ if ( position == '150px')
     </div>
     <!-- Start Summary Bar -->
     <div class="rightnav" id="rightnav">
-            <span id='details'>
-            <div class='summaries'>
-                <h2>Revision Summary</h2>
-		<span  id='revisionsummary'>
-                <p>Graphical interpretation of the sketch. I want the design to emphasize the changes made, and the justifications and inspirations for those changes. Must promote conflict of ideas, but constructively.</p>
-                </span>
-		<h2 style='margin-top:10px;' id='inspiration'>Inspiration</h2>
+            <div class='summaries' id='details'>
+                <h2 id='revisionsummary'>Revision Summary</h2>
+		<h2 id='inspiration'>Inspiration</h2>
                 <div class='links' id="link1">
 		    <a href='http://www.heroku.com/' target='_blank'>Heroku</a></div>
                 <div class='explainations' id="explain1"><span>Borrowed the dark design, used blue instead of purple as accent. Hoping to keep focus on the product changes</span></div>
@@ -327,7 +100,7 @@ if ( position == '150px')
                 <div class='explainations' id="explain2"><span>Completely borrowed the timeline slider to show the changes over time</span></div>
 		<br><a href='https://github.com/KFishner/Peer-Progression/zipball/master' class='forkbutton'>Edit</a>
             </div>
-            </span> 
+
     </div>
     <!-- End Summary Bar -->
 

@@ -5,30 +5,15 @@
     <title>Peer Progression</title>
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
     <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
+
     <!-- Add jQuery library -->
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="http://jquery-ui.googlecode.com/svn/tags/latest/ui/jquery.effects.core.js"></script>
     <script src="http://jquery-ui.googlecode.com/svn/tags/latest/ui/jquery.effects.slide.js"></script>
-
-    <!-- Alerts -->
-        
-    <!-- Navigation -->
     
-    <!-- Add New Listing -->
-    <script>
-    function addnew(){
-    document.getElementById('addnew').innerHTML = "<form><input type='text' name='listinginfo' id='listinginfo' value='' onclick='' onkeyup='if (event.keyCode == 13) document.getElementById('add2').click()' style='padding:0px;display:inline-block;'/><a class='forkbutton' id='add2' style='font-size:12px;margin:0px 10px' onclick='insertnew();'>+ Add</a></form>";
-    document.getElementById('listinginfo').focus();
-    document.getElementById('listinginfo').select();
-    }
-    function insertnew(){
-    var newlisting = document.createElement('a')
-    newlisting.setAttribute('class', 'listing')
-    var text = document.createTextNode(document.getElementById('listinginfo').value)
-    newlisting.appendChild(text)
-    document.getElementById('insertnew').appendChild(newlisting);
-    }
-    </script>
+    <!-- jQuery Script -->
+    <script type="text/javascript" src="js/jquery.base.js"></script>
+
 
 </head>
 
@@ -66,12 +51,12 @@
             <div class="gridtext">kevin fishner.com<p>My landing site</p></div>
             <a href="woomply.html"><div class="gridimage"></div></a>
         </div>
+	</span>
+
         <div class="gridfour">
-            <div class="gridtext">Add New<p>Project</p></div>
-            <a href="woomply.html"><div class="gridimage"><img src='images/icons/plus.png' style='padding:35px'/></div></a>
+            <div class="gridtext" id='addnewtitle'><span>Add New</span><p id='addnewdesc'>Project</p></div>
+            <div id='addnewproject' class="gridimage"><img src='images/icons/plus.png' style='padding:35px'/></div>
         </div>
-        </span>
-        <!-- Add New <a onclick="addnew();" class="listing"><span id="addnew">+ Add New</span></a>  Add New -->
     </div>
     <!--  End Listing -->
     </div>
